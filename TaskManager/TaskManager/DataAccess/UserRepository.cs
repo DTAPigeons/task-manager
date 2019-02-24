@@ -51,5 +51,10 @@ namespace TaskManager.DataAccess {
             User user = entities.Where(entitie => entitie.Username == userName && entitie.Password == passWord).FirstOrDefault();
             return (user != null && user.UserId > 0);
         }
+
+        public bool UserNameIsTaken(string userName) {
+            User user = entities.Where(entitie => entitie.Username == userName).FirstOrDefault();
+            return (user != null && user.UserId > 0);
+        }
     }
 }
