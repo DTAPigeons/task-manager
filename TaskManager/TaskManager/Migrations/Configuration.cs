@@ -5,14 +5,14 @@ namespace TaskManager.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<TaskManager.DataAccess.TaskManagerContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<TaskManager.TaskManagerEntities>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(TaskManager.DataAccess.TaskManagerContext context)
+        protected override void Seed(TaskManager.TaskManagerEntities context)
         {
             //  This method will be called after migrating to the latest version.
 
